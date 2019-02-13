@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "bc36c133-77f6-4078-81bc-34d8b3dc3914",
+		"name": "ExamenPrimerParcial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/users/new/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/new/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"new",
+						""
+					]
+				},
+				"description": "Nuevo Usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/users/login/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/users/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"login",
+						""
+					]
+				},
+				"description": "Login de Usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/empresas/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/empresas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"empresas",
+						""
+					]
+				},
+				"description": "Obtener Version"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/empresas/all/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "empresa",
+							"value": "Unitec",
+							"type": "text"
+						},
+						{
+							"key": "correo",
+							"value": "unitecceutec@uni.edu",
+							"type": "text"
+						},
+						{
+							"key": "rubro",
+							"value": "Educacion",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "Col. Los Pinos",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "987654321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/empresas/all/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"empresas",
+						"all",
+						""
+					]
+				},
+				"description": "Obtener todos los datos de la empresa"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/empresas/new/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "empresa",
+							"value": "Unitec",
+							"type": "text"
+						},
+						{
+							"key": "correo",
+							"value": "unitecceutec@uni.edu",
+							"type": "text"
+						},
+						{
+							"key": "rubro",
+							"value": "Educacion",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "Col. Los Pinos",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "987654321",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/empresas/new/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"empresas",
+						"new",
+						""
+					]
+				},
+				"description": "Ingreso de una Nueva Empresa"
+			},
+			"response": []
+		}
+	]
+}

@@ -53,5 +53,35 @@ router.post('/new', function (req, res, next) {
     });
 });
 
+router.put('/done/:empresaID', function (req, res, next) {
+   var _empresaID= req.params._empresaID;
+   var _empresaAct = req.body;
+   var _empresaActualizacion = null;
+   var nuevosDatos = data.map(
+    function (doc, i) {
+        if(doc._empresaID == _empresaID){
+            _empresaActualizacion = Object.assign(
+                {},
+                doc,
+                {"Cambio realizado":true},
+                _empresaAct
+            );
+            return _empresaActualizacion;
+        }
+        return doc;
+    }
+   );
+    datos = nuevosDatos;
+    fileModel.write(datos, function (err) {
+        if(err){
+            console.log(err);
+            return res.status(500).json({'Error':'No se obtuvieron datos'});
+        }
+        return res.status(200).json(_empresaActualizacion);        
+    });  
+    }  
+});
+
 
 module.exports = router;
+
